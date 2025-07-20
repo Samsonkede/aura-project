@@ -6,13 +6,19 @@
   <title>AURA - Arbre Universel de Résonance et d'Archives</title>
   <style>
     body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f4f9f4; color: #222; }
-    header { background: #2d6a4f; color: white; padding: 2rem; text-align: center; }
+    header { background: linear-gradient(90deg, #2d6a4f, #40916c); color: white; padding: 2rem; text-align: center; }
     header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
     header p { font-size: 1.2rem; }
-    .cta-btn { background: #52b788; color: white; padding: 1rem 2rem; border: none; border-radius: 5px; font-size: 1rem; text-decoration: none; }
+    .cta-btn { background: #52b788; color: white; padding: 1rem 2rem; border: none; border-radius: 5px; font-size: 1rem; text-decoration: none; transition: background 0.3s; }
+    .cta-btn:hover { background: #40916c; }
     .section { padding: 2rem; max-width: 1000px; margin: auto; }
     .section h2 { color: #40916c; }
     .footer { background: #1b4332; color: white; text-align: center; padding: 1rem; font-size: 0.9rem; }
+    form input, form textarea { width: 100%; padding: 0.8rem; margin-top: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; }
+    form button { background: #2d6a4f; color: white; padding: 0.8rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; }
+    form button:hover { background: #1b4332; }
+    .video-container { text-align: center; margin: 2rem auto; }
+    .video-container iframe { width: 100%; max-width: 700px; height: 400px; border: none; border-radius: 10px; }
   </style>
 </head>
 <body>
@@ -43,9 +49,28 @@
   </ul>
 </section>
 
+<section class="section video-container">
+  <h2>Découvrez AURA en vidéo</h2>
+  <iframe src="https://www.youtube.com/embed/VIDÉO_ID" allowfullscreen></iframe>
+  <p><em>Remplacez VIDÉO_ID par l'identifiant de votre vidéo YouTube.</em></p>
+</section>
+
 <section class="section" id="contact">
   <h2>Nous contacter</h2>
-  <p><strong>KEDE NJOUME SAMSON</strong><br>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <label for="name">Nom</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Adresse email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Envoyer</button>
+  </form>
+  <p>Ou contactez-nous directement :<br>
+  <strong>KEDE NJOUME SAMSON</strong><br>
   samsonkede42@gmail.com<br>
   +237 694 85 92 14</p>
 </section>
